@@ -1683,7 +1683,6 @@ input, select, textarea {
     text-shadow: 0 0 4px rgba(0,0,0,0.7); /* improves readability */
     z-index: 5;
 }
-
 .cropped-image {
     height: 250px;               /* adjust as you like */
     overflow: hidden;
@@ -1692,9 +1691,9 @@ input, select, textarea {
 
 .cropped-image img {
     width: 100%;
-    height: auto;
+    height: 100%;       /* <-- required for shifting to work */
     object-fit: cover;
-    object-position: center bottom;   /* use the bottom half */
+    object-position: center 50%;   /* shift image upward by ~10% */
 }
 
 /* Wrapper for image + credit */
